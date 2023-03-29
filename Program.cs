@@ -10,20 +10,21 @@ namespace Data_structure
     {
         static void Main(string[] args)
         {
-            Stack<int> stack = new Stack<int>();
+            
+            
+                Stack<int> stack = new Stack<int>();
 
-            stack.Push(70);
-            stack.Push(30);
-            stack.Push(56);
+                stack.Push(70);
+                stack.Push(30);
+                stack.Push(56);
 
-            Console.WriteLine("Peek: " + stack.Peek());
+                while (!stack.IsEmpty())
+                {
+                    Console.WriteLine("Peek: " + stack.Peek());
+                    Console.WriteLine("Pop: " + stack.Pop());
+                }
 
-            while (!stack.IsEmpty())
-            {
-                Console.WriteLine(stack.Pop());
-            }
-
-            Console.ReadLine();
+                Console.ReadLine();
         }
-    }
+     }
 }
