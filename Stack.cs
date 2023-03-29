@@ -46,5 +46,7 @@ namespace Data_structure
         {
             return list.First == null;
         }
+
+
     }
 }
