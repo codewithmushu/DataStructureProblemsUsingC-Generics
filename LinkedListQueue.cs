@@ -29,6 +29,33 @@ namespace QueueProblem
             Count++;
         }
 
+        public T Dequeue()
+        {
+            if (head == null)
+            {
+                throw new InvalidOperationException("Queue is empty");
+            }
+
+            var value = head.Value;
+            head = head.Next;
+            if (head == null)
+            {
+                tail = null;
+            }
+            Count--;
+            return value;
+        }
+
+        public T Peek()
+        {
+            if (head == null)
+            {
+                throw new InvalidOperationException("Queue is empty");
+            }
+
+            return head.Value;
+        }
+
 
         public IEnumerator<T> GetEnumerator()
         {
