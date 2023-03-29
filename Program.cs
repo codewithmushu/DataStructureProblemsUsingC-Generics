@@ -18,7 +18,21 @@ namespace QueueProblem
             Console.WriteLine("Initial queue:");
             PrintQueue(queue);
 
-            
+
+            var dequeuedItem = queue.Dequeue();
+            Console.WriteLine($"Dequeued item: {dequeuedItem}");
+            Console.WriteLine("Queue after dequeue:");
+            PrintQueue(queue);
+
+            var peekedItem = queue.Peek();
+            Console.WriteLine($"Peeked item: {peekedItem}");
+            Console.WriteLine("Queue after peek:");
+            PrintQueue(queue);
+
+            Console.ReadLine();
+
+
+
         }
 
         static void PrintQueue(LinkedListQueue<int> queue)
